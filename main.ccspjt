@@ -1,0 +1,52 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\User\Desktop\temperatura_16f877a\main]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=2
+D1=13-08-2024
+D1_L=7
+D1_L1=[52212]Project Closed.
+D1_L2=[52212]Project Opened.
+D1_L3=[56209]Started Editing.
+D1_L4=[57718]Stopped Editing.
+D1_L5=[58107]Started Editing.
+D1_L6=[58953]Stopped Editing.
+TotalEdit=35
+TotalDebug=0
+D1_E=35
+D1_D=0
+D1_L7=[58953]Project Closed.
+D2=14-12-2024
+D2_L=2
+D2_L1=[81153]Project Opened.
+D2_L2=[81180]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=main.c
+t1=1
+Count=2
+2=main.h
+t2=1
+[main.c]
+Type=4
+
+[defines]
+buildcount=12
+[Units]
+Count=1
+1=main (main)

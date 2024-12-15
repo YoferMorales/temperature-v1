@@ -1,0 +1,35 @@
+#include <main.h>
+int sensor=0;
+int temperatura=0;
+void main()
+{
+   setup_adc_ports(AN0_AN1_AN3);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   while(TRUE)
+   {
+      sensor=read_ADC();
+      temperatura=(sensor*0.488);
+      if(temperatura <= 20)
+      {
+         OUTPUT_LOW(PIN_B1);
+         OUTPUT_LOW(PIN_B2);
+         OUTPUT_HIGH(PIN_B0);
+      }
+      else if(temperatura >= 30)
+      {
+         OUTPUT_LOW(PIN_B0);
+         OUTPUT_LOW(PIN_B1);
+         OUTPUT_HIGH(PIN_B2);
+      }
+      else
+      {
+         OUTPUT_LOW(PIN_B0);
+         OUTPUT_LOW(PIN_B2);
+         OUTPUT_HIGH(PIN_B1);
+      }
+
+      //TODO: User Code
+   }
+
+}

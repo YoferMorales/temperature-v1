@@ -1,0 +1,38 @@
+#include <main.h>
+#define ledrojo  PIN_B0 
+#define ledverde  PIN_B1
+#define ledazul  PIN_B2
+int sensor=0;
+int temperatura=0;
+void main()
+{
+   setup_adc_ports(AN0_AN1_AN3);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   while(TRUE)
+   {
+      sensor=read_ADC();
+      temperatura=(sensor*(5.0/1026.0));
+      if(temperatura <= 20)
+      {
+         OUTPUT_LOW(ledrojo);
+         OUTPUT_LOW(ledverde);
+         OUTPUT_HIGH(ledazul);
+      }
+      else if(temperatura >= 30)
+      {
+         OUTPUT_LOW(ledazul);
+         OUTPUT_LOW(ledverde);
+         OUTPUT_HIGH(ledrojo);
+      }
+      else
+      {
+         OUTPUT_LOW(ledrojo);
+         OUTPUT_LOW(ledazul);
+         OUTPUT_HIGH(ledverde);
+      }
+
+      //TODO: User Code
+   }
+
+}

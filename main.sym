@@ -1,0 +1,76 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     sensor
+021     temperatura
+022-023 @ITOF.P1
+022-025 @SFTOI.P2
+022-025 @MULFF.P3
+022     main.@SCRATCH1
+023     @delay_ms1.P1
+026-029 @MULFF.P1
+02A     @MULFF.@SCRATCH1
+02B     @MULFF.@SCRATCH2
+02C     @MULFF.@SCRATCH3
+02D     @MULFF.@SCRATCH4
+02E     @MULFF.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @ITOF
+000023  @MULFF
+00009A  @SFTOI
+0000BB  @delay_ms1
+0000CF  main
+0000CF  @cinit1
+0000DB  @cinit2
+
+Project Directory:
+    C:\Users\User\Desktop\temperatura_16f877a\
+
+Project Files:
+    main.c                                                  [13-ago.-24 16:21  CRC=B7F3422B]
+    main.h                                                  [13-ago.-24 14:30  CRC=00000000]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h  [21-oct.-22 11:02  CRC=6A06E202]
+
+Source signature=8C01062F
+Program memory checksum=0000
+Hex file CRC=A73B
+
+Units:
+    C:\Users\User\Desktop\temperatura_16f877a\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
